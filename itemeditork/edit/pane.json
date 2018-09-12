@@ -1,0 +1,345 @@
+{
+	"gui" : {
+	
+		"close" : {
+			"type" : "button",
+			"base" : "/itemeditork/edit/x.png",
+			"hover" : "/itemeditork/edit/x.png",
+			"pressed" : "/itemeditork/edit/x.png",
+			"pressedOffset" : [0, 0],
+			"callback" : "close",
+			"position" : [256, 193],
+			"vAnchor" : "bottom",
+			"hAnchor" : "right",
+			"zlevel" : 99
+		},
+
+		"background" : {
+			"zlevel" : 0,
+			"type" : "background",
+			"fileHeader" : "/itemeditork/edit/header.png",
+			"fileBody" : "/itemeditork/edit/body.png",
+			"fileFooter" : "/itemeditork/edit/footer.png"
+		},
+
+		"h1" : {
+			"vAnchor" : "bottom",
+			"hAnchor" : "left",
+			"zlevel" : 100,
+			"color" : "black",
+			"type" : "label",
+			"position" : [4, 194],
+			"value" : "Rexmeck Item Editor Pro"
+		},
+
+		"bg2" : {
+			"file" : "/itemeditork/edit/bg.png",
+			"vAnchor" : "bottom",
+			"hAnchor" : "left",
+			"zlevel" : 3,
+			"type" : "image",
+			"position" : [0, 0]
+		},
+
+		"headerover" : {
+			"file" : "/itemeditork/edit/header.png",
+			"vAnchor" : "bottom",
+			"hAnchor" : "left",
+			"zlevel" : 3,
+			"type" : "image",
+			"position" : [0, 193]
+		},
+
+		//BASE FINISHED
+
+
+		"objects" : {
+			"buttons" : {
+				"vertical" : {
+					"forward" : {
+						"hover" : "/itemeditork/edit/sup.png?brightness=60",
+						"pressed" : "",
+						"base" : "/itemeditork/edit/sup.png"
+					},
+					"backward" : {
+						"hover" : "/itemeditork/edit/sdown.png?brightness=60",
+						"pressed" : "",
+						"base" : "/itemeditork/edit/sdown.png"
+					}
+				},
+				"horizontal" : {
+					"forward" : {
+						"hover" : "/interface/scrollarea/harrow-forwardhover.png",
+						"pressed" : "",
+						"base" : "/interface/scrollarea/harrow-forward.png"
+					},
+					"backward" : {
+						"hover" : "/interface/scrollarea/harrow-backwardhover.png",
+						"pressed" : "",
+						"base" : "/interface/scrollarea/harrow-backward.png"
+					}
+				}
+			},
+			"children" : {
+				"list" : {
+					"schema" : {
+						"listTemplate" : {
+							"icon" : {
+								"file" : "",
+								"zlevel" : 1,
+								"type" : "image",
+								"position" : [2, 3]
+							},
+							"background" : {
+								"file" : "/itemeditork/edit/objbg.png",
+								"zlevel" : -1,
+								"type" : "image",
+								"position" : [0, 1]
+							},
+							"name" : {
+								"vAnchor" : "mid",
+								"hAnchor" : "left",
+								"type" : "label",
+								"color" : "#ff3c3c",
+								"wrapWidth" : 75,
+								//"fontSize" : 8,
+								"width" : 138,
+								"position" : [21, 10],
+								"value" : "Replace Me"
+							}
+						},
+						"spacing" : [0, 0],
+						"memberSize" : [108, 21],
+						"unselectedBG" : "/itemeditork/edit/objbg.png",
+						"selectedBG" : "/itemeditork/edit/objbg.png?brightness=60"
+					},
+					"type" : "list",
+					"position" : [0, 0],
+					"hAnchor" : "left",
+					"vAnchor" : "top"
+				}
+			},
+			"rect" : [142, 18, 250, 190],
+			"type" : "scrollArea",
+			"zlevel" : 15,
+			"thumbs" : {
+				"vertical" : {
+					"hover" : {
+						"inner" : "/itemeditork/edit/scrollmid.png?brightness=60",
+						"begin" : "/itemeditork/edit/scrollbottom.png?brightness=60",
+						"end" : "/itemeditork/edit/scrolltop.png?brightness=60"
+					},
+					"pressed" : {
+						"inner" : "/itemeditork/edit/scrollmid.png?brightness=60",
+						"begin" : "/itemeditork/edit/scrollbottom.png?brightness=60",
+						"end" : "/itemeditork/edit/scrolltop.png?brightness=60"
+					},
+					"base" : {
+						"inner" : "/itemeditork/edit/scrollmid.png",
+						"begin" : "/itemeditork/edit/scrollbottom.png",
+						"end" : "/itemeditork/edit/scrolltop.png"
+					}
+				},
+				"horizontal" : {
+					"hover" : {
+						"inner" : "/interface/scrollarea/hthumb-innerhover.png",
+						"begin" : "/interface/scrollarea/hthumb-beginhover.png",
+						"end" : "/interface/scrollarea/hthumb-endhover.png"
+					},
+					"pressed" : {
+						"inner" : "/interface/scrollarea/hthumb-innerhover.png",
+						"begin" : "/interface/scrollarea/hthumb-beginhover.png",
+						"end" : "/interface/scrollarea/hthumb-endhover.png"
+					},
+					"base" : {
+						"inner" : "/interface/scrollarea/hthumb-inner.png",
+						"begin" : "/interface/scrollarea/hthumb-begin.png",
+						"end" : "/interface/scrollarea/hthumb-end.png"
+					}
+				}
+			}
+		},
+
+		"save" : {
+			"pressedOffset" : [0, -1],
+			"callback" : "call",
+			"wrapWidth" : 80,
+			"base" : "/itemeditork/edit/button.png",
+			"hAnchor" : "left",
+			"vAnchor" : "bottom",
+			"zlevel" : 15,
+			"type" : "button",
+			"hover" : "/itemeditork/edit/button.png?brightness=60",
+			"position" : [197, 3],
+			"caption" : "Save",
+			"fontColor" : "#ff3c3c",
+			"fontSize" : 8
+		},
+
+		"jsonlog" : {
+			"pressedOffset" : [0, -1],
+			"callback" : "call",
+			"wrapWidth" : 80,
+			"base" : "/itemeditork/edit/button.png",
+			"hAnchor" : "left",
+			"vAnchor" : "bottom",
+			"zlevel" : 15,
+			"type" : "button",
+			"hover" : "/itemeditork/edit/button.png?brightness=60",
+			"position" : [141, 3],
+			"caption" : "Json To Logs",
+			"fontColor" : "#ff3c3c",
+			"fontSize" : 8
+		},
+		
+		"rawjson" : {
+			"pressedOffset" : [0, -1],
+			"callback" : "call",
+			"wrapWidth" : 80,
+			"base" : "/itemeditork/edit/button.png",
+			"hAnchor" : "left",
+			"vAnchor" : "bottom",
+			"zlevel" : 15,
+			"type" : "button",
+			"hover" : "/itemeditork/edit/button.png?brightness=60",
+			"position" : [3, 3],
+			"caption" : "Raw Json",
+			"fontColor" : "#ff3c3c",
+			"fontSize" : 8
+		},
+
+
+		"remcount" : {
+			"pressedOffset" : [0, -1],
+			"callback" : "call",
+			"wrapWidth" : 80,
+			"base" : "/itemeditork/edit/neg.png",
+			"hAnchor" : "left",
+			"vAnchor" : "bottom",
+			"zlevel" : 15,
+			"type" : "button",
+			"hover" : "/itemeditork/edit/neg.png?brightness=60",
+			"position" : [78, 3]
+		},
+
+		"addcount" : {
+			"pressedOffset" : [0, -1],
+			"callback" : "call",
+			"wrapWidth" : 80,
+			"base" : "/itemeditork/edit/posi.png",
+			"hAnchor" : "left",
+			"vAnchor" : "bottom",
+			"zlevel" : 15,
+			"type" : "button",
+			"hover" : "/itemeditork/edit/posi.png?brightness=60",
+			"position" : [127, 3]
+		},
+
+		"count" : {
+			"textAlign" : "center",
+			"hAnchor" : "left",
+			"vAnchor" : "bottom",
+			"callback" : "null",
+			"zlevel" : 100,
+			"color" : "#ff3c3c",
+			"type" : "textbox",
+			"regex" : "[0-9]{0,4}",
+			"position" : [30, 4],
+			"value" : "1"
+		},
+
+		"editparam" : {
+			"pressedOffset" : [0, -1],
+			"callback" : "call",
+			"wrapWidth" : 80,
+			"base" : "/itemeditork/edit/pencil.png",
+			"hAnchor" : "left",
+			"vAnchor" : "bottom",
+			"zlevel" : 15,
+			"type" : "button",
+			"hover" : "/itemeditork/edit/pencil.png?brightness=60",
+			"position" : [253, 179]
+		},
+
+		"addparam" : {
+			"pressedOffset" : [0, -1],
+			"callback" : "call",
+			"wrapWidth" : 80,
+			"base" : "/itemeditork/edit/posi.png",
+			"hAnchor" : "left",
+			"vAnchor" : "bottom",
+			"zlevel" : 15,
+			"type" : "button",
+			"hover" : "/itemeditork/edit/posi.png?brightness=60",
+			"position" : [253, 165]
+		},
+
+		"remparam" : {
+			"pressedOffset" : [0, -1],
+			"callback" : "call",
+			"wrapWidth" : 80,
+			"base" : "/itemeditork/edit/neg.png",
+			"hAnchor" : "left",
+			"vAnchor" : "bottom",
+			"zlevel" : 15,
+			"type" : "button",
+			"hover" : "/itemeditork/edit/neg.png?brightness=60",
+			"position" : [253, 151]
+		},
+
+		"printparam" : {
+			"pressedOffset" : [0, -1],
+			"callback" : "call",
+			"wrapWidth" : 80,
+			"base" : "/itemeditork/edit/page.png",
+			"hAnchor" : "left",
+			"vAnchor" : "bottom",
+			"zlevel" : 15,
+			"type" : "button",
+			"hover" : "/itemeditork/edit/page.png?brightness=60",
+			"position" : [253, 137]
+		},
+
+		"itemID" : {
+			"vAnchor" : "bottom",
+			"charLimit" : 110,
+			"hAnchor" : "left",
+			"zlevel" : 14,
+			"color" : "#ff3c3c",
+			"type" : "textbox",
+			"callback" : "null",
+			"value" : "",
+			"position" : [5, 180]
+		},
+
+		"itemname" : {
+			"vAnchor" : "bottom",
+			"charLimit" : 110,
+			"hAnchor" : "left",
+			"zlevel" : 14,
+			"color" : "#ff3c3c",
+			"type" : "label",
+			"value" : "^#1a1a1a;shortdescription",
+			"position" : [5, 166]
+		},
+
+		"itemdesc" : {
+			"vAnchor" : "top",
+			"wrapWidth" : 133,
+			"hAnchor" : "left",
+			"zlevel" : 14,
+			"color" : "#ff3c3c",
+			"type" : "label",
+			"value" : "^#1a1a1a;description",
+			"position" : [5, 160]
+		}
+
+	},
+
+	"scriptWidgetCallbacks" : [
+		"call"
+	],
+
+	"scripts" : ["/itemeditork/edit/main.lua", "/scripts/actions/status.lua"],
+	"scriptDelta" : 1
+}

@@ -1,0 +1,128 @@
+{
+	"gui" : {
+
+		"close" : {
+			"type" : "button",
+			"base" : "/itemeditork/settings/x.png",
+			"hover" : "/itemeditork/settings/x.png",
+			"pressed" : "/itemeditork/settings/x.png",
+			"pressedOffset" : [0, 0],
+			"callback" : "close",
+			"position" : [98, 31],
+			"vAnchor" : "bottom",
+			"hAnchor" : "right",
+			"zlevel" : 99
+		},
+
+		"background" : {
+			"zlevel" : 0,
+			"type" : "background",
+			"fileHeader" : "/itemeditork/settings/header.png",
+			"fileBody" : "/itemeditork/settings/body.png"
+		},
+		
+		"h1" : {
+			"vAnchor" : "bottom",
+			"hAnchor" : "left",
+			"zlevel" : 100,
+			"color" : "black",
+			"type" : "label",
+			"position" : [3, 32],
+			"value" : "Editor Settings"
+		},
+
+		"bg2" : {
+			"file" : "/itemeditork/settings/bg.png",
+			"vAnchor" : "bottom",
+			"hAnchor" : "left",
+			"zlevel" : 3,
+			"type" : "image",
+			"position" : [0, 0]
+		},
+
+		//BASE FINISHED
+
+		"savecolor" : {
+			"pressedOffset" : [0, -1],
+			"callback" : "call",
+			"wrapWidth" : 80,
+			"base" : "/itemeditork/settings/save.png",
+			"hover" : "/itemeditork/settings/save.png?brightness=60",
+			"hAnchor" : "left",
+			"vAnchor" : "bottom",
+			"zlevel" : 15,
+			"type" : "button",
+			"position" : [95, 17],
+			"fontSize" : 7
+		},
+
+		"valuecolor" : {
+			"vAnchor" : "bottom",
+			"callback" : "null",
+			"maxWidth" : 150,
+			"enterKey" : "null",
+			"hAnchor" : "left",
+			"zlevel" : 15,
+			"type" : "textbox",
+			"color" : "#fafafa",
+			"regex" : "[0-9a-fA-F]{0,6}",
+			"textAlign" : "left",
+			"position" : [50, 19],
+			"fontSize" : 7,
+			"caption" : "editorparametername"
+		},
+		
+		"LABELcolor" : {
+			"vAnchor" : "bottom",
+			"callback" : "null",
+			"maxWidth" : 150,
+			"enterKey" : "null",
+			"hAnchor" : "left",
+			"zlevel" : 15,
+			"type" : "label",
+			"color" : "#fafafa",
+			"textAlign" : "left",
+			"position" : [6, 19],
+			"value" : "Main Color : ",
+			"fontSize" : 7,
+			"caption" : "editorparametername"
+		},
+		
+		"LABELrainbow" : {
+			"vAnchor" : "bottom",
+			"callback" : "null",
+			"maxWidth" : 150,
+			"enterKey" : "null",
+			"hAnchor" : "left",
+			"zlevel" : 15,
+			"type" : "label",
+			"color" : "#fafafa",
+			"textAlign" : "left",
+			"position" : [6, 5],
+			"value" : "Rainbow UI : ",
+			"fontSize" : 7,
+			"caption" : "editorparametername"
+		},
+		
+		
+		"checkrainbow" : {
+			"type" : "button",
+			"base" : "/itemeditork/settings/uncheck.png",
+			"hover" : "/itemeditork/settings/uncheck.png?brightness=60",
+			"baseImageChecked" : "/itemeditork/settings/check.png",
+			"hoverImageChecked" : "/itemeditork/settings/check.png?brightness=60",
+			"checkable" : true,
+			"checked" : false,
+			"position" : [95, 3],
+			"hAnchor" : "left",
+			"callback" : "call"
+		}
+	},
+
+	"scriptWidgetCallbacks" : [
+		"call"
+	],
+
+	"scripts" : ["/itemeditork/settings/main.lua"],
+	"scriptDelta" : 1
+}

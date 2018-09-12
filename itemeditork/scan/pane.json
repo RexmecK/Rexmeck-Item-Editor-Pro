@@ -1,0 +1,211 @@
+{
+	"gui" : {
+
+		//"panefeature" : {
+		//	"type" : "panefeature",
+		//	"anchor" : "centerTop",
+		//	"offset" : [0, -32],
+		//	"keyDismissable" : true,
+		//	"positionLocked" : true
+		//},
+		
+		"close" : {
+			"type" : "button",
+			"base" : "/itemeditork/scan/x.png",
+			"hover" : "/itemeditork/scan/x.png",
+			"pressed" : "/itemeditork/scan/x.png",
+			"pressedOffset" : [0, 0],
+			"callback" : "close",
+			"position" : [158, 45],
+			"vAnchor" : "bottom",
+			"hAnchor" : "right",
+			"zlevel" : 99
+		},
+		
+		"settings" : {
+			"type" : "button",
+			"base" : "/itemeditork/scan/gear.png",
+			"hover" : "/itemeditork/scan/gear.png",
+			"pressed" : "/itemeditork/scan/gear.png",
+			"pressedOffset" : [0, 0],
+			"callback" : "settings",
+			"position" : [147, 45],
+			"vAnchor" : "bottom",
+			"hAnchor" : "right",
+			"zlevel" : 99
+		},
+		
+		"about" : {
+			"type" : "button",
+			"base" : "/itemeditork/scan/about.png",
+			"hover" : "/itemeditork/scan/about.png",
+			"pressed" : "/itemeditork/scan/about.png",
+			"pressedOffset" : [0, 0],
+			"callback" : "about",
+			"position" : [136, 45],
+			"vAnchor" : "bottom",
+			"hAnchor" : "right",
+			"zlevel" : 99
+		},
+
+		"background" : {
+			"zlevel" : 0,
+			"type" : "background",
+			"fileHeader" : "/itemeditork/scan/header.png",
+			"fileBody" : "/itemeditork/scan/body.png",
+			"fileFooter" : "/itemeditork/scan/footer.png"
+		},
+
+		"h1" : {
+			"vAnchor" : "bottom",
+			"hAnchor" : "left",
+			"zlevel" : 100,
+			"color" : "black",
+			"type" : "label",
+			"position" : [3, 46],
+			"value" : "Rexmeck Item Editor Pro"
+		},
+
+		"bg2" : {
+			"file" : "/itemeditork/scan/bg.png",
+			"vAnchor" : "bottom",
+			"hAnchor" : "left",
+			"zlevel" : 3,
+			"type" : "image",
+			"position" : [0, 0]
+		},
+
+		"bg1" : {
+			"file" : "/itemeditork/scan/header.png",
+			"vAnchor" : "bottom",
+			"hAnchor" : "left",
+			"zlevel" : 3,
+			"type" : "image",
+			"position" : [0, 45]
+		},
+
+		//BASE FINISHED
+
+		"left" : {
+			"pressedOffset" : [0, -1],
+			"callback" : "scan",
+			"wrapWidth" : 80,
+			"base" : "/itemeditork/scan/left.png",
+			"hover" : "/itemeditork/scan/left.png?brightness=60",
+			"hAnchor" : "left",
+			"vAnchor" : "bottom",
+			"zlevel" : 15,
+			"type" : "button",
+			"position" : [3, 17],
+			"fontSize" : 7
+		},
+
+		"right" : {
+			"pressedOffset" : [0, -1],
+			"callback" : "scan",
+			"wrapWidth" : 80,
+			"base" : "/itemeditork/scan/right.png",
+			"hover" : "/itemeditork/scan/right.png?brightness=60",
+			"hAnchor" : "left",
+			"vAnchor" : "bottom",
+			"zlevel" : 15,
+			"type" : "button",
+			"position" : [30, 17],
+			"fontSize" : 7
+		},
+
+		"matter" : {
+			"pressedOffset" : [0, -1],
+			"callback" : "scan",
+			"wrapWidth" : 80,
+			"base" : "/itemeditork/scan/matter.png",
+			"hover" : "/itemeditork/scan/matter.png?brightness=60",
+			"hAnchor" : "left",
+			"vAnchor" : "bottom",
+			"zlevel" : 15,
+			"type" : "button",
+			"position" : [57, 17],
+			"fontSize" : 7
+		},
+
+		"wire" : {
+			"pressedOffset" : [0, -1],
+			"callback" : "scan",
+			"wrapWidth" : 80,
+			"base" : "/itemeditork/scan/wire.png",
+			"hover" : "/itemeditork/scan/wire.png?brightness=60",
+			"hAnchor" : "left",
+			"vAnchor" : "bottom",
+			"zlevel" : 15,
+			"type" : "button",
+			"position" : [85, 17],
+			"fontSize" : 7
+		},
+
+		"paint" : {
+			"pressedOffset" : [0, -1],
+			"callback" : "scan",
+			"wrapWidth" : 80,
+			"base" : "/itemeditork/scan/paint.png",
+			"hover" : "/itemeditork/scan/paint.png?brightness=60",
+			"hAnchor" : "left",
+			"vAnchor" : "bottom",
+			"zlevel" : 15,
+			"type" : "button",
+			"position" : [113, 17],
+			"fontSize" : 7
+		},
+		
+		"search" : {
+			"pressedOffset" : [0, -1],
+			"callback" : "scan",
+			"wrapWidth" : 80,
+			"base" : "/itemeditork/scan/search.png",
+			"hover" : "/itemeditork/scan/search.png?brightness=60",
+			"hAnchor" : "left",
+			"vAnchor" : "bottom",
+			"zlevel" : 15,
+			"type" : "button",
+			"position" : [141, 17],
+			"fontSize" : 7
+		},
+
+		"spawnItem" : {
+			"pressedOffset" : [0, -1],
+			"callback" : "scan",
+			"wrapWidth" : 80,
+			"base" : "/itemeditork/scan/scan.png",
+			"hover" : "/itemeditork/scan/scan.png?brightness=60",
+			"hAnchor" : "left",
+			"vAnchor" : "bottom",
+			"zlevel" : 15,
+			"type" : "button",
+			"position" : [155, 3],
+			"fontSize" : 7
+		},
+
+		"itemId" : {
+			"vAnchor" : "bottom",
+			"callback" : "null",
+			"maxWidth" : 150,
+			"enterKey" : "null",
+			"hAnchor" : "left",
+			"zlevel" : 15,
+			"type" : "textbox",
+			"color" : "#ff3c3c",
+			"textAlign" : "left",
+			"position" : [4, 5],
+			"fontSize" : 7,
+			"caption" : "editorparametername"
+		}
+	},
+
+	"scriptWidgetCallbacks" : [
+		"about",
+		"scan",
+		"settings"
+	],
+
+	"scripts" : ["/itemeditork/scan/main.lua"],
+	"scriptDelta" : 1
+}

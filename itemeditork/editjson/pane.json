@@ -1,0 +1,133 @@
+{
+	"gui" : {
+		"close" : {
+			"type" : "button",
+			"base" : "/itemeditork/editjson/x.png",
+			"hover" : "/itemeditork/editjson/x.png",
+			"pressed" : "/itemeditork/editjson/x.png",
+			"pressedOffset" : [0, 0],
+			"callback" : "close",
+			"position" : [256, 179],
+			"vAnchor" : "bottom",
+			"hAnchor" : "right",
+			"zlevel" : 99
+		},
+		
+		"clear" : {
+			"type" : "button",
+			"base" : "/itemeditork/editjson/clear.png",
+			"hover" : "/itemeditork/editjson/clear.png",
+			"pressed" : "/itemeditork/editjson/clear.png",
+			"pressedOffset" : [0, 0],
+			"callback" : "call",
+			"position" : [245, 179],
+			"vAnchor" : "bottom",
+			"hAnchor" : "right",
+			"zlevel" : 99
+		},
+		
+		"rejson" : {
+			"type" : "button",
+			"base" : "/itemeditork/editjson/rejson.png",
+			"hover" : "/itemeditork/editjson/rejson.png",
+			"pressed" : "/itemeditork/editjson/rejson.png",
+			"pressedOffset" : [0, 0],
+			"callback" : "call",
+			"position" : [234, 179],
+			"vAnchor" : "bottom",
+			"hAnchor" : "right",
+			"zlevel" : 99
+		},
+
+		"background" : {
+			"zlevel" : 0,
+			"type" : "background",
+			"fileHeader" : "/itemeditork/editjson/header.png",
+			"fileBody" : "/itemeditork/editjson/body.png"
+		},
+
+		"h1" : {
+			"vAnchor" : "bottom",
+			"hAnchor" : "left",
+			"zlevel" : 100,
+			"color" : "black",
+			"type" : "label",
+			"position" : [3, 180],
+			"value" : "Editing"
+		},
+
+		"bg2" : {
+			"file" : "/itemeditork/editjson/bg.png",
+			"vAnchor" : "bottom",
+			"hAnchor" : "left",
+			"zlevel" : 3,
+			"type" : "image",
+			"position" : [0, 0]
+		},
+		
+		"bg1" : {
+			"file" : "/itemeditork/editjson/header.png",
+			"vAnchor" : "bottom",
+			"hAnchor" : "left",
+			"zlevel" : 1,
+			"type" : "image",
+			"position" : [0, 179]
+		},
+
+		//BASE FINISHED
+
+		"save" : {
+			"pressedOffset" : [0, -1],
+			"callback" : "call",
+			"wrapWidth" : 80,
+			"base" : "/itemeditork/editjson/button.png",
+			"hover" : "/itemeditork/editjson/button.png?brightness=60",
+			"hAnchor" : "left",
+			"vAnchor" : "bottom",
+			"caption" : "Save",
+			"fontColor" : "#ff3c3c",
+			"zlevel" : 15,
+			"type" : "button",
+			"position" : [211, 3],
+			"fontSize" : 7
+		},
+
+
+		"textbox" : {
+			"zlevel" : 4,
+			"type" : "canvas",
+			"rect" : [3, 17, 264, 176],
+			"captureMouseEvents" : true,
+			"captureKeyboardEvents" : true
+		},
+		
+		"paste" : {
+			"vAnchor" : "bottom",
+			"callback" : "call",
+			"maxWidth" : 260,
+			"enterKey" : "null",
+			"hAnchor" : "left",
+			"zlevel" : 15,
+			"type" : "textbox",
+			"color" : "#ff3c3c",
+			"textAlign" : "left",
+			"position" : [4, 5],
+			"fontSize" : 7,
+			"caption" : "editorparametername"
+		}
+	},
+
+	"canvasClickCallbacks" : {
+		"textbox" : "canvasClickEvent"
+	},
+	"canvasKeyCallbacks" : {
+		"textbox" : "canvasKeyEvent"
+	},
+
+	"scriptWidgetCallbacks" : [
+		"call"
+	],
+
+	"scripts" : ["/itemeditork/editjson/main.lua"],
+	"scriptDelta" : 1
+}

@@ -1,0 +1,109 @@
+{
+	"gui" : {
+		
+		"close" : {
+			"type" : "button",
+			"base" : "/itemeditork/saveparam/x.png",
+			"hover" : "/itemeditork/saveparam/x.png",
+			"pressed" : "/itemeditork/saveparam/x.png",
+			"pressedOffset" : [0, 0],
+			"callback" : "close",
+			"position" : [130, 31],
+			"vAnchor" : "bottom",
+			"hAnchor" : "right",
+			"zlevel" : 99
+		},
+
+		"background" : {
+			"zlevel" : 0,
+			"type" : "background",
+			"fileHeader" : "/itemeditork/saveparam/header.png",
+			"fileBody" : "/itemeditork/saveparam/body.png"
+		},
+
+		"h1" : {
+			"vAnchor" : "bottom",
+			"hAnchor" : "left",
+			"zlevel" : 100,
+			"color" : "black",
+			"type" : "label",
+			"position" : [3, 32],
+			"fontSize" : 6,
+			"value" : "Saving to editor"
+		},
+
+		"bg2" : {
+			"file" : "/itemeditork/saveparam/bg.png",
+			"vAnchor" : "bottom",
+			"hAnchor" : "left",
+			"zlevel" : 3,
+			"type" : "image",
+			"position" : [0, 0]
+		},
+
+		"bg1" : {
+			"file" : "/itemeditork/saveparam/header.png",
+			"vAnchor" : "bottom",
+			"hAnchor" : "left",
+			"zlevel" : 3,
+			"type" : "image",
+			"position" : [0, 31]
+		},
+
+		//BASE FINISHED
+
+		"save" : {
+			"pressedOffset" : [0, -1],
+			"callback" : "call",
+			"wrapWidth" : 80,
+			"base" : "/itemeditork/saveparam/button.png",
+			"hover" : "/itemeditork/saveparam/button.png?brightness=60",
+			"hAnchor" : "left",
+			"vAnchor" : "bottom",
+			"caption" : "Save",
+			"zlevel" : 15,
+			"type" : "button",
+			"position" : [90, 3],
+			"fontSize" : 7
+		},
+
+		"name" : {
+			"vAnchor" : "bottom",
+			"callback" : "null",
+			"maxWidth" : 119,
+			"enterKey" : "null",
+			"hAnchor" : "left",
+			"zlevel" : 15,
+			"type" : "textbox",
+			"color" : "#ff3c3c",
+			"textAlign" : "left",
+			"position" : [4, 18],
+			"fontSize" : 7,
+			"caption" : "editorparametername"
+		},
+
+		"error" : {
+			"visible" : false,
+			"vAnchor" : "top",
+			"callback" : "null",
+			"wrapWidth" : 138,
+			"enterKey" : "null",
+			"hAnchor" : "left",
+			"zlevel" : 15,
+			"type" : "label",
+			"color" : "#ff3c3c",
+			"textAlign" : "left",
+			"position" : [4, 24],
+			"value" : "o",
+			"fontSize" : 7,
+			"caption" : ""
+		}
+	},
+
+	"scriptWidgetCallbacks" : [
+		"call"
+	],
+
+	"scripts" : ["/itemeditork/saveparam/main.lua"],
+	"scriptDelta" : 1
+}

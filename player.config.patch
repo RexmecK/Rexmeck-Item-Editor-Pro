@@ -1,0 +1,7 @@
+[
+	{
+		"op": "add",
+		"path": "/deploymentConfig/scripts/-",
+		"value": "/itemeditork/messageKeeper.lua"
+	}
+]

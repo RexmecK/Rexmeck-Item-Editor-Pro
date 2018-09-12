@@ -1,0 +1,139 @@
+{
+	"gui" : {
+
+		"close" : {
+			"type" : "button",
+			"base" : "/itemeditork/save/x.png",
+			"hover" : "/itemeditork/save/x.png",
+			"pressed" : "/itemeditork/save/x.png",
+			"pressedOffset" : [0, 0],
+			"callback" : "close",
+			"position" : [130, 31],
+			"vAnchor" : "bottom",
+			"hAnchor" : "right",
+			"zlevel" : 99
+		},
+
+		"background" : {
+			"zlevel" : 0,
+			"type" : "background",
+			"fileHeader" : "/itemeditork/save/header.png",
+			"fileBody" : "/itemeditork/save/body.png"
+		},
+
+		"h1" : {
+			"vAnchor" : "bottom",
+			"hAnchor" : "left",
+			"zlevel" : 100,
+			"color" : "black",
+			"type" : "label",
+			"position" : [3, 33],
+			"fontSize" : 6,
+			"value" : "Rexmeck Item Editor"
+		},
+
+		"bg1" : {
+			"file" : "/itemeditork/save/header.png",
+			"vAnchor" : "bottom",
+			"hAnchor" : "left",
+			"zlevel" : 3,
+			"type" : "image",
+			"position" : [0, 31]
+		},
+
+		//BASE FINISHED
+
+		"inventory" : {
+			"pressedOffset" : [0, -1],
+			"callback" : "give",
+			"wrapWidth" : 80,
+			"base" : "/itemeditork/save/button.png",
+			"hover" : "/itemeditork/save/button.png?brightness=60",
+			"hAnchor" : "left",
+			"vAnchor" : "bottom",
+			"zlevel" : 15,
+			"type" : "button",
+			"caption" : "Save",
+			"position" : [3, 16],
+			"fontSize" : 7
+		},
+		
+		"inventoryreplace" : {
+			"pressedOffset" : [0, -1],
+			"callback" : "give",
+			"wrapWidth" : 80,
+			"base" : "/itemeditork/save/button.png",
+			"hover" : "/itemeditork/save/button.png?brightness=60",
+			"hAnchor" : "left",
+			"vAnchor" : "bottom",
+			"zlevel" : 15,
+			"type" : "button",
+			"caption" : "Replace",
+			"fontSize" : 4,
+			"position" : [3, 3]
+		},
+
+		"matter" : {
+			"pressedOffset" : [0, -1],
+			"callback" : "give",
+			"wrapWidth" : 80,
+			"base" : "/itemeditork/save/matter.png",
+			"hover" : "/itemeditork/save/matter.png?brightness=60",
+			"hAnchor" : "left",
+			"vAnchor" : "bottom",
+			"zlevel" : 15,
+			"type" : "button",
+			"position" : [30, 3],
+			"fontSize" : 7
+		},
+
+		"wire" : {
+			"pressedOffset" : [0, -1],
+			"callback" : "give",
+			"wrapWidth" : 80,
+			"base" : "/itemeditork/save/wire.png",
+			"hover" : "/itemeditork/save/wire.png?brightness=60",
+			"hAnchor" : "left",
+			"vAnchor" : "bottom",
+			"zlevel" : 15,
+			"type" : "button",
+			"position" : [57, 3],
+			"fontSize" : 7
+		},
+
+		"paint" : {
+			"pressedOffset" : [0, -1],
+			"callback" : "give",
+			"wrapWidth" : 80,
+			"base" : "/itemeditork/save/paint.png",
+			"hover" : "/itemeditork/save/paint.png?brightness=60",
+			"hAnchor" : "left",
+			"vAnchor" : "bottom",
+			"zlevel" : 15,
+			"type" : "button",
+			"position" : [85, 3],
+			"fontSize" : 7
+		},
+		
+		"search" : {
+			"pressedOffset" : [0, -1],
+			"callback" : "give",
+			"wrapWidth" : 80,
+			"base" : "/itemeditork/save/search.png",
+			"hover" : "/itemeditork/save/search.png?brightness=60",
+			"hAnchor" : "left",
+			"vAnchor" : "bottom",
+			"zlevel" : 15,
+			"type" : "button",
+			"position" : [112, 3],
+			"fontSize" : 7
+		}
+	},
+
+	"scriptWidgetCallbacks" : [
+		"give"
+	],
+
+	"scripts" : ["/itemeditork/save/main.lua"],
+	"scriptDelta" : 1
+}

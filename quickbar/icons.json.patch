@@ -1,0 +1,12 @@
+[
+	{
+		"op": "add",
+    	"path": "/normal/-",
+    	"value": { "label" : "RexmecK Item Editor Pro", "pane" : "/itemeditork/scan/pane.json", "icon" : "/itemeditork/smallicon.png" }
+    },
+	{
+		"op": "add",
+    	"path": "/normal/-",
+    	"value": { "label" : "Editor Settings", "pane" : "/itemeditork/settings/pane.json", "icon" : "/itemeditork/smallicon.png" }
+    }
+]

@@ -1,0 +1,92 @@
+{
+	"gui" : {
+		
+		"close" : {
+			"type" : "button",
+			"base" : "/itemeditork/copy/x.png",
+			"hover" : "/itemeditork/copy/x.png",
+			"pressed" : "/itemeditork/copy/x.png",
+			"pressedOffset" : [0, 0],
+			"callback" : "close",
+			"position" : [130, 31],
+			"vAnchor" : "bottom",
+			"hAnchor" : "right",
+			"zlevel" : 99
+		},
+
+		"background" : {
+			"zlevel" : 0,
+			"type" : "background",
+			"fileHeader" : "/itemeditork/copy/header.png",
+			"fileBody" : "/itemeditork/copy/body.png"
+		},
+
+		"h1" : {
+			"vAnchor" : "bottom",
+			"hAnchor" : "left",
+			"zlevel" : 100,
+			"color" : "black",
+			"type" : "label",
+			"position" : [3, 32],
+			"fontSize" : 6,
+			"value" : "Please select and Ctrl-X"
+		},
+
+		"bg2" : {
+			"file" : "/itemeditork/copy/bg.png",
+			"vAnchor" : "bottom",
+			"hAnchor" : "left",
+			"zlevel" : 3,
+			"type" : "image",
+			"position" : [0, 0]
+		},
+
+		"bg1" : {
+			"file" : "/itemeditork/copy/header.png",
+			"vAnchor" : "bottom",
+			"hAnchor" : "left",
+			"zlevel" : 3,
+			"type" : "image",
+			"position" : [0, 31]
+		},
+
+		//BASE FINISHED
+
+		"ok" : {
+			"pressedOffset" : [0, -1],
+			"callback" : "close",
+			"wrapWidth" : 80,
+			"base" : "/itemeditork/copy/button.png",
+			"hover" : "/itemeditork/copy/button.png?brightness=60",
+			"hAnchor" : "left",
+			"vAnchor" : "bottom",
+			"caption" : "Okay",
+			"zlevel" : 15,
+			"type" : "button",
+			"position" : [90, 3],
+			"fontSize" : 7
+		},
+
+		"text" : {
+			"vAnchor" : "bottom",
+			"callback" : "null",
+			"maxWidth" : 119,
+			"enterKey" : "null",
+			"hAnchor" : "left",
+			"zlevel" : 15,
+			"type" : "textbox",
+			"color" : "#ff3c3c",
+			"textAlign" : "left",
+			"position" : [4, 18],
+			"fontSize" : 7,
+			"caption" : "text"
+		}
+	},
+
+	"scriptWidgetCallbacks" : [
+		"call"
+	],
+
+	"scripts" : ["/itemeditork/copy/main.lua"],
+	"scriptDelta" : 1
+}
