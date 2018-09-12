@@ -33,8 +33,21 @@ mouse = {
 
 scrolling = false
 
+guisize = {
+	x = 261,
+	y = 159
+}
+
+guisize = {
+	x = 333 - 3,
+	y = 221 - 17
+}
+
+renderLines = 26
+renderLineTexts = 60
+
 function canvasClickEvent(position, button, isButtonDown)
-	if rect.contains({252 - 3, 0, 264 - 3, 176 - 17}, textbox:mousePosition()) then
+	if rect.contains({guisize.x - 12, 0, guisize.x, guisize.y}, textbox:mousePosition()) then
 		scrolling = isButtonDown
 		if isButtonDown then
 			return
@@ -43,7 +56,7 @@ function canvasClickEvent(position, button, isButtonDown)
 		scrolling = isButtonDown
 	end
 	
-	if not widget.hasFocus("textbox") or not rect.contains({0, 0, 264 - 3, 176 - 17}, textbox:mousePosition()) then
+	if not widget.hasFocus("textbox") or not rect.contains({0, 0, guisize.x, guisize.y}, textbox:mousePosition()) then
 		if isButtonDown and button == 0 then
 			return
 		end
@@ -56,7 +69,7 @@ function canvasClickEvent(position, button, isButtonDown)
 	mouse[button + 1] = {down = isButtonDown, position = position}
 	
 	if not isButtonDown and button == 0 and not widget.hasFocus("textbox") then
-		local dif = vec2.sub({-10, 176 - 8}, {-position[1], position[2]})
+		local dif = vec2.sub({-10, guisize.y + 9}, {-position[1], position[2]})
 		
 		dif = vec2.mul(dif, {1/5, 1/8})
 		dif[1] = math.floor(dif[1])
@@ -80,7 +93,7 @@ function canvasClickEvent(position, button, isButtonDown)
 	end
 	
 	if isButtonDown and button == 0 and not (keyboard.lshift or keyboard.rshift) then
-		local dif = vec2.sub({-10, 176 - 8}, {-position[1], position[2]})
+		local dif = vec2.sub({-10, guisize.y + 9}, {-position[1], position[2]})
 		
 		dif = vec2.mul(dif, {1/5, 1/8})
 		dif[1] = math.floor(dif[1])
@@ -243,26 +256,26 @@ function canvasKeyEvent(key, isKeyDown)
 			else
 				moveCursor("last") clearSelect()
 			end
-			tb.view[1] = math.max(#textlist[tb.cursor[2]] - 21, 1)
+			tb.view[1] = math.max(#textlist[tb.cursor[2]] - renderLines, 1)
 			return
 		end
 	end
 	
 	if keycode[key] == "PAGEDOWN" and isKeyDown then
 		clearSelect()
-		for _= 1,20 do
+		for _= 1,(renderLines - 1) do
 			moveCursor("down")
 		end
-		tb.view[2] = math.min(tb.view[2] + 20, math.max(#textlist - 20, 1))
+		tb.view[2] = math.min(tb.view[2] + (renderLines - 1), math.max(#textlist - (renderLines - 1), 1))
 		return
 	end
 	
 	if keycode[key] == "PAGEUP" and isKeyDown then
 		clearSelect()
-		for _= 1,20 do
+		for _= 1,(renderLines - 1) do
 			moveCursor("up")
 		end
-		tb.view[2] = math.max(tb.view[2] - 20, 0)
+		tb.view[2] = math.max(tb.view[2] - (renderLines - 1), 0)
 		return
 	end
 	
@@ -398,7 +411,7 @@ end
 function cursorFocus()
 	tb.view = {
 		math.min(math.max(tb.view[1], tb.cursor[1] - 47), tb.cursor[1]), 
-		math.min(math.max(tb.view[2], tb.cursor[2] - 20), tb.cursor[2] - 1)
+		math.min(math.max(tb.view[2], tb.cursor[2] - (renderLines - 1)), tb.cursor[2] - 1)
 	}
 end
 
@@ -441,20 +454,15 @@ function removeLetter(line, at)
 		for i,v in ipairs(mergeline1) do
 			moveCursor("left")
 		end
-		--sb.logInfo("removeLetter;state1")
 	elseif #textlist[line] == 1 then 
 		timesnap = 5 - 2
 		textlist[line] = jarray()
 		tb.cursor[1] = 1
-		--sb.logInfo("removeLetter;state2")
 	else
 		timesnap = 5 - 2
 		if textlist[line][at - 1] then
 			moveCursor("left")
 			table.remove(textlist[line], at - 1)
-			--sb.logInfo("removeLetter;state3;state1")
-		else
-			--sb.logInfo("removeLetter;state3")
 		end
 	end
 	cursorFocus()
@@ -506,7 +514,6 @@ end
 function removeSelectedLetters()
 
 	if tb.select and (tb.select.w[2] ~= tb.select.e[2] or tb.select.w[1] ~= tb.select.e[1]) then
-		--selectiveRemoveLetters(tb.select.w[2], tb.select.w[1], tb.select.e[1])
 		multiline_function(true)
 		clearSelect()
 		cursorFocus()
@@ -686,7 +693,7 @@ function copyT(t)
 	return tab
 end
 
-function combineT(t, t2) --   t >>> newtable <<< t2
+function combineT(t, t2)
 	for i,v in pairs(t2) do
 		table.insert(t,v)
 	end
@@ -825,7 +832,7 @@ function repack()
 		end
 	end
 	
-	if config.getParameter("scriptConfig").saveraw then
+	if repacktype ~= "rejson" and config.getParameter("scriptConfig").saveraw then
 		local s, resu = pcall(json.decode, str)
 		if not s then
 			sb.logError(string.gsub(resu, "%[.+: ", "", 1))
@@ -982,22 +989,16 @@ function update(dt)
 		timesnap = timesnap - 1
 	end
 	
-	for i,v in pairs(snapshot) do
-		--world.debugText(i.." = "..sb.printJson(v.tb, 0), "", vec2.add(world.entityPosition(player.id()), {0, i}), "#00ff00")
-	end
-	
 	if scrolling then
-		local scroll = (#textlist) * (( 158 - (textbox:mousePosition()[2] + (158 / #textlist) * 10) ) / 158)
+		local scroll = (#textlist) * (( (guisize.y - 1) - (textbox:mousePosition()[2] + ((guisize.y - 1) / #textlist) * 10) ) / (guisize.y - 1))
 	
 		tb.view[2] = math.min( 
 			math.max(
 				lerp(tb.view[2], scroll, 4)
 			,0
 			),
-			math.max( #textlist - 20, 0)
+			math.max( #textlist - (renderLines - 1), 0)
 		)
-		--world.debugText("mouse = "..sb.printJson(textbox:mousePosition(), 0), "", vec2.add(world.entityPosition(player.id()), {0, 0}), "#00ff00")
-		--world.debugText("scroll = "..scroll, "", vec2.add(world.entityPosition(player.id()), {0, 8}), "#00ff00")
 	end
 	shiftUI(dt)
 	updateRender(dt)
@@ -1043,7 +1044,7 @@ function updateMouse(dt)
 	end
 	if mouse[1] and mouse[1].down and not keyboard.backspace then
 		local position = textbox:mousePosition()
-		local dif = vec2.sub({-10, 176 - 8}, {-position[1], position[2]})
+		local dif = vec2.sub({-10, guisize.y + 9}, {-position[1], position[2]})
 		
 		dif = vec2.mul(dif, {1/5, 1/8})
 		dif[1] = math.floor(dif[1])
@@ -1092,29 +1093,29 @@ function updateSelect(dt)
 	for sy = selected.w[2], selected.e[2] do
 		if selected.w[2] == selected.e[2] then
 			drt:drawLine({ 15 + ((selected.e[1] - tb.view[1] - 0.5) * 5),
-							162 - ((sy - tb.view[2]) * 8)}, 
+							(guisize.y + 3) - ((sy - tb.view[2]) * 8)}, 
 						{15 + (((selected.w[1] - tb.view[1]) - 0.5) * 5), 
-							162 - ((sy - tb.view[2]) * 8)}
+							(guisize.y + 3) - ((sy - tb.view[2]) * 8)}
 							, "#fafafa32", 16)
 		elseif sy == selected.e[2] then
 			drt:drawLine({ 15 + ((selected.e[1] - tb.view[1] - 0.5) * 5),
-							162 - ((sy - tb.view[2]) * 8)}, 
+							(guisize.y + 3) - ((sy - tb.view[2]) * 8)}, 
 						{15 + (((0 - tb.view[1]) - 0.5) * 5), 
-							162 - ((sy - tb.view[2]) * 8)}
+							(guisize.y + 3) - ((sy - tb.view[2]) * 8)}
 							, "#fafafa32", 16)
 		elseif sy == selected.w[2] then
 			drt:drawLine(
 				{15 + ((#textlist[sy] - tb.view[1] + 0.5) * 5),
-					162 - ((sy - tb.view[2]) * 8)}, 
+					(guisize.y + 3) - ((sy - tb.view[2]) * 8)}, 
 				{15 + (((selected.w[1] - tb.view[1]) - 0.5) * 5),
-					162 - ((sy - tb.view[2]) * 8)}
+					(guisize.y + 3) - ((sy - tb.view[2]) * 8)}
 				, "#fafafa32", 16)
 		else
 			drt:drawLine(
 				{15 + ((0 - tb.view[1] - 0.5) * 5),
-					162 - ((sy - tb.view[2]) * 8)}, 
+					(guisize.y + 3) - ((sy - tb.view[2]) * 8)}, 
 				{15 + (((#textlist[sy] - tb.view[1]) + 0.5) * 5),
-					162 - ((sy - tb.view[2]) * 8)}
+					(guisize.y + 3) - ((sy - tb.view[2]) * 8)}
 				, "#fafafa32", 16)
 		end
 	end
@@ -1126,31 +1127,32 @@ function updateRender(dt)
 		local mf = math.floor
 		local mc = math.ceil
 		local drt = textbox
-		drt:drawLine({6, 159}, {6, 0}, "#"..themeColor, 24)
-		for y = math.max(mf(tb.view[2]), 1), math.min(mf(tb.view[2]) + 21, #textlist) do
-			drt:drawText(y, {position = {1, 162 - (y * 8) + tb.view[2] * 8}, horizontalAnchor = "left", verticalAnchor = "mid", wrapWidth = nil}, 6, themeDarkColor)
+		drt:drawLine({8, guisize.y}, {8, 0}, "#"..themeColor, 36)
+		for y = math.max(mf(tb.view[2]), 1), math.min(mf(tb.view[2]) + renderLines, #textlist) do
+			drt:drawText(y, {position = {1, (guisize.y + 3) - (y * 8) + tb.view[2] * 8}, horizontalAnchor = "left", verticalAnchor = "mid", wrapWidth = nil}, 6, themeDarkColor)
 			local totalchar = #textlist[y]
 			if totalchar > 0 and #textlist[y] + 1 > tb.view[1] then
-				for x = math.max(math.min(mc(tb.view[1]), totalchar), 1), math.min(mf(tb.view[1]) + 47, totalchar) do
-					--drt:drawText(utf8.char(string.byte(textlist[y][x])), {position = {15 + (x * 5) + tb.view[1] * -5, 162 - (y * 8) + tb.view[2] * 8}, horizontalAnchor = "mid", verticalAnchor = "mid", wrapWidth = nil}, 8, "#"..themeColor)
-					drt:drawImage(getChar(string.byte(textlist[y][x])), {15 + (x * 5) + tb.view[1] * -5, 162 - (y * 8) + tb.view[2] * 8}, 0.5, "#"..themeColor, true)
+				for x = math.max(math.min(mc(tb.view[1]), totalchar), 1), math.min(mf(tb.view[1]) + renderLineTexts, totalchar) do
+					drt:drawImage(getChar(string.byte(textlist[y][x])), {15 + (x * 5) + tb.view[1] * -5, (guisize.y + 3) - (y * 8) + tb.view[2] * 8}, 0.5, "#"..themeColor, true)
 				end
 			end
 		end
 		textbox:drawLine(
-			vec2.add({13 + (tb.cursor[1] * 5), 159 - (tb.cursor[2] * 8)}, vec2.mul(tb.view, {-5,8})), 
-			vec2.add({13 + (tb.cursor[1] * 5), 165 - (tb.cursor[2] * 8)}, vec2.mul(tb.view, {-5,8})), 
+			vec2.add({13 + (tb.cursor[1] * 5), guisize.y - (tb.cursor[2] * 8)}, vec2.mul(tb.view, {-5,8})), 
+			vec2.add({13 + (tb.cursor[1] * 5), (guisize.y + 6) - (tb.cursor[2] * 8)}, vec2.mul(tb.view, {-5,8})), 
 			{255,255,255,(math.sin(os.clock() * 4)) * 255}, 
 			1
 		)
 		if tb.select then
 			updateSelect(dt)
 		end
-		drt:drawLine({254, 158}, {254, 1}, "#4b4b4b", 24)
-		drt:drawLine({254, 157}, {254, 2}, "#343434", 20)
-		drt:drawLine({254, math.max(158 - ((20 / math.max(#textlist, 20)) * 158) - (tb.view[2] / #textlist) * 158, 2)}, {254, math.max(math.min(158 - (tb.view[2] / (#textlist - 1)) * 158, 157), 2)}, "#"..themeColor, 20)
-		drt:drawLine({254, math.max(159 - ((20 / math.max(#textlist, 20)) * 158) - (tb.view[2] / #textlist) * 158, 2)}, {254, math.max(math.min(157 - (tb.view[2] / (#textlist - 1)) * 158, 157), 2)}, "#343434", 20)
-		
+		drt:drawLine({guisize.x - 8, guisize.y - 2}, {guisize.x - 8, 2}, "#4b4b4b", 14)	
+		drt:drawLine({guisize.x - 8, guisize.y - 3}, {guisize.x - 8, 3}, "#343434", 10)
+		drt:drawLine({guisize.x - 8, math.max((guisize.y - 2) - (((renderLines - 1) / math.max(#textlist, (renderLines - 1))) * (guisize.y - 2)) - (tb.view[2] / #textlist) * (guisize.y - 2), 2)}, {guisize.x - 8, math.max(math.min((guisize.y - 2) - (tb.view[2] / (#textlist - 1)) * (guisize.y - 1), (guisize.y - 2)), 1)}, "#"..themeColor, 10)
+		drt:drawLine({guisize.x - 8, math.max(guisize.y - (((renderLines - 1) / math.max(#textlist, (renderLines - 1))) * (guisize.y - 2)) - (tb.view[2] / #textlist) * (guisize.y - 2), 2)}, {guisize.x - 8, math.max(math.min((guisize.y - 3) - (tb.view[2] / (#textlist - 1)) * (guisize.y - 1), (guisize.y - 2)), 1)}, "#"..themeColor, 10)
+		--guisize.x 
+		--(guisize.x - 1)
+		--(guisize.x - 2)
 	else
 		if repacktype == "save" then
 			textbox:drawText("Saving....", {position = {264 / 2, 176 / 2}, horizontalAnchor = "mid", verticalAnchor = "mid", wrapWidth = nil}, 16, "#"..themeColor)

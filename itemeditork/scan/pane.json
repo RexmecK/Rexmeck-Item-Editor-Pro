@@ -188,7 +188,7 @@
 			"vAnchor" : "bottom",
 			"callback" : "null",
 			"maxWidth" : 150,
-			"enterKey" : "null",
+			"enterKey" : "scan",
 			"hAnchor" : "left",
 			"zlevel" : 15,
 			"type" : "textbox",

@@ -7,8 +7,8 @@
 			"pressed" : "/itemeditork/editjson/x.png",
 			"pressedOffset" : [0, 0],
 			"callback" : "close",
-			"position" : [256, 179],
-			"vAnchor" : "bottom",
+			"position" : [323, 224],
+			"vAnchor" : "top",
 			"hAnchor" : "right",
 			"zlevel" : 99
 		},
@@ -20,8 +20,8 @@
 			"pressed" : "/itemeditork/editjson/clear.png",
 			"pressedOffset" : [0, 0],
 			"callback" : "call",
-			"position" : [245, 179],
-			"vAnchor" : "bottom",
+			"position" : [312,  224],
+			"vAnchor" : "top",
 			"hAnchor" : "right",
 			"zlevel" : 99
 		},
@@ -33,8 +33,8 @@
 			"pressed" : "/itemeditork/editjson/rejson.png",
 			"pressedOffset" : [0, 0],
 			"callback" : "call",
-			"position" : [234, 179],
-			"vAnchor" : "bottom",
+			"position" : [301, 224],
+			"vAnchor" : "top",
 			"hAnchor" : "right",
 			"zlevel" : 99
 		},
@@ -52,7 +52,7 @@
 			"zlevel" : 100,
 			"color" : "black",
 			"type" : "label",
-			"position" : [3, 180],
+			"position" : [3, 225],
 			"value" : "Editing"
 		},
 
@@ -67,11 +67,11 @@
 		
 		"bg1" : {
 			"file" : "/itemeditork/editjson/header.png",
-			"vAnchor" : "bottom",
+			"vAnchor" : "top",
 			"hAnchor" : "left",
 			"zlevel" : 1,
 			"type" : "image",
-			"position" : [0, 179]
+			"position" : [0, 224]
 		},
 
 		//BASE FINISHED
@@ -88,7 +88,7 @@
 			"fontColor" : "#ff3c3c",
 			"zlevel" : 15,
 			"type" : "button",
-			"position" : [211, 3],
+			"position" : [278, 3],
 			"fontSize" : 7
 		},
 
@@ -96,7 +96,7 @@
 		"textbox" : {
 			"zlevel" : 4,
 			"type" : "canvas",
-			"rect" : [3, 17, 264, 176],
+			"rect" : [3, 17, 333, 221], // 204 y
 			"captureMouseEvents" : true,
 			"captureKeyboardEvents" : true
 		},

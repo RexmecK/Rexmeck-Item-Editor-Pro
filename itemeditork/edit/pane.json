@@ -243,7 +243,7 @@
 			"zlevel" : 100,
 			"color" : "#ff3c3c",
 			"type" : "textbox",
-			"regex" : "[0-9]{0,4}",
+			"regex" : "[0-9]{0,6}",
 			"position" : [30, 4],
 			"value" : "1"
 		},

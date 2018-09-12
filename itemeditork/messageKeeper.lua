@@ -71,9 +71,9 @@ if init then
 			end
 		)
 		message.setHandler("editor_rawSave", 
-			function(_, loc, id, item)
+			function(_, loc, id, item, slot)
 				if loc then
-					_MKRawSave[id] = item
+					_MKRawSave[id] = {item = item, slot = slot}
 				end
 			end
 		)

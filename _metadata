@@ -1,0 +1,13 @@
+{
+  "version" : "Beta 7",
+  "tags" : "Miscellaneous|Cheats and God Items|User Interface|In-Game Tools",
+  "author" : "RexmecK",
+  "description" : "A Tool that edits items ingame. New and Improved from a previous version.\nDiscord Group: https://discord.gg/WWrtKvG\n\n[h1][b]How to open the Interface without quickbar:[/b][/h1]\n - Go to singleplayer and /admin yourself.\n - Press C and find Rexmeck Item Editor Pro.\n[IMG]https://image.ibb.co/cuk1LG/craft.png[/IMG]\n- Hold it on your hands and Left Click. It should open up the interface.\n\n[h1][b]How to open the Interface with quickbar:[/b][/h1]\nObv the icon is replaced by matter manipulator. Open it and you can find the name.\n[IMG]https://image.ibb.co/kjaqEb/quickbar.png[/IMG]\n\n[h1][b]You can scan an item depending which hand is equipped (Mostly left side).[/b][/h1]\n- But also you can scan your toolbar like matter manipulator.\n[IMG]https://image.ibb.co/jiTMLG/scan.png[/IMG]\n\n[h1][b]Quick tip[/b][/h1]\n[IMG]http://thumbs2.imagebam.com/f2/cb/f6/69464c677504823.jpg[/IMG]\n- You can Ctrl-X in the clipboard to copy in text editor.\n\n[h1][b]Alpha Testers made this possible to happen:[/b][/h1]\n   Discord : Big brother#3552 \n   Starbound Char : space hobo\n-\n   Discord : Khodin#1796\n -\n   Discord : Spectre#0898 \n   Starbound Char : Ludmina \n   SteamID : 76561193845521385\n-\n   Discord : typical#0654\n\n[h1][b]Credits[/b][/h1]\nCraig Mason-Jones : JSON.lua\nSilverfeelin : Quickbar Mini",
+  "requires" : [],
+  "name" : "RexmecK Item Editor Pro",
+  "friendlyName" : "RexmecK Item Editor Pro",
+  "steamContentId" : "1217967107",
+  "priority" : 122,
+  "link" : "steam://url/CommunityFilePage/1217967107",
+  "includes" : ["itemeditork"]
+}

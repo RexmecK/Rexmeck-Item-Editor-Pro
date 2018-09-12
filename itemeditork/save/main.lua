@@ -63,27 +63,40 @@ function give(wid)
 	local s, e = pcall( function()
 		
 		if wid == "inventoryreplace" then
-		
-			local toreplace = config.getParameter("scriptConfig").originalItem
-			
-			if player.hasItem(toreplace, true) then
-				player.consumeItem(toreplace, false, true)
+			if lastslot == "right" or lastslot == "left" then
+				local toreplace = config.getParameter("scriptConfig").originalItem
+				
+				if player.hasItem(toreplace, true) then
+					player.consumeItem(toreplace, false, true)
+				end
+				
+				player.giveItem(togive)
+				
+				world.sendEntityMessage(player.id(),"editor_rawSave", config.getParameter("scriptConfig").editoruuid, togive, lastslot)
+			elseif lastslot == "matter" then
+				player.giveEssentialItem("beamaxe",togive)	
+			elseif lastslot == "wire" then
+				player.giveEssentialItem("wiretool",togive)
+			elseif lastslot == "paint" then
+				player.giveEssentialItem("painttool",togive)
+			elseif lastslot == "search" then
+				player.giveEssentialItem("inspectiontool",togive)
 			end
-			
-			player.giveItem(togive)
-			
-			world.sendEntityMessage(player.id(),"editor_rawSave", config.getParameter("scriptConfig").editoruuid, togive)
-			
 		elseif wid == "inventory" then
 			player.giveItem(togive)
+			world.sendEntityMessage(player.id(),"editor_rawSave", config.getParameter("scriptConfig").editoruuid, togive, "right")
 		elseif wid == "matter" then
 			player.giveEssentialItem("beamaxe",togive)
+			world.sendEntityMessage(player.id(),"editor_rawSave", config.getParameter("scriptConfig").editoruuid, togive, "matter")
 		elseif wid == "wire" then
 			player.giveEssentialItem("wiretool",togive)
+			world.sendEntityMessage(player.id(),"editor_rawSave", config.getParameter("scriptConfig").editoruuid, togive, "wire")
 		elseif wid == "paint" then
 			player.giveEssentialItem("painttool",togive)
+			world.sendEntityMessage(player.id(),"editor_rawSave", config.getParameter("scriptConfig").editoruuid, togive, "paint")
 		elseif wid == "search" then
 			player.giveEssentialItem("inspectiontool",togive)
+			world.sendEntityMessage(player.id(),"editor_rawSave", config.getParameter("scriptConfig").editoruuid, togive, "search")
 		end
 		
 		pane.dismiss()
@@ -102,6 +115,7 @@ function init()
 	pcall(setUIColor, status.statusProperty("rex_ui_color", root.assetJson("/itemeditork/info.config:defaultColor", "72e372")))
 	shiftingEnabled = status.statusProperty("rex_ui_rainbow", false)
 	togive = config.getParameter("scriptConfig").item
+	lastslot = config.getParameter("scriptConfig").slot
 	
 	local name = togive.name
 	

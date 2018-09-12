@@ -187,7 +187,7 @@ function widget_save()
 	local saved = packItem()
 	if saved then
 		local ui = root.assetJson("/itemeditork/save/pane.json")
-		ui.scriptConfig = {item = saved, originalItem = me._item, editoruuid = me.uuid}
+		ui.scriptConfig = {item = saved, originalItem = me._item, editoruuid = me.uuid, slot = me.slot}
 		player.interact("ScriptPane", ui)
 	end
 end
@@ -196,7 +196,7 @@ function widget_addcount()
 	if widget.getText("count") == "" then
 		widget.setText("count", "0")
 	end
-	widget.setText("count",tostring(math.min(tonumber(widget.getText("count")) + 1, 9999)))
+	widget.setText("count",tostring(math.min(tonumber(widget.getText("count")) + 1, 999999)))
 end
 
 function widget_remcount()
@@ -335,7 +335,9 @@ function packItem()
 	end
 end
 
-function processItem(item)
+function processItem(data)
+	local item = data.item
+	me.slot = data.slot
 	widget.clearListItems("objects.list")
 	widget.setText("itemID", "")
 	widget.setText("itemname", "^#1a1a1a;shortdescription")
@@ -371,9 +373,11 @@ function init()
 	pcall(setUIColor, status.statusProperty("rex_ui_color", root.assetJson("/itemeditork/info.config:defaultColor", "72e372")))
 	shiftingEnabled = status.statusProperty("rex_ui_rainbow", false)
 	me._item = config.getParameter("scriptConfig").item
+	me.slot = config.getParameter("scriptConfig").slot
 	local reloadsurvival = widget.getData("close")
 	if reloadsurvival then
 		me._item = reloadsurvival.item
+		me.slot = reloadsurvival.slot
 	end
 	if me._item then
 		me.item = me._item
@@ -411,7 +415,7 @@ function init()
 end
 
 function uninit()
-	widget.setData("close", {item = packItem(), originalItem = me._item})
+	widget.setData("close", {item = packItem(), originalItem = me._item, slot = me.slot})
 end
 
 function update(dt)

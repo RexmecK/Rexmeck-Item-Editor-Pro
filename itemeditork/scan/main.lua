@@ -1,5 +1,6 @@
 require("/itemeditork/json.lua")
 require("/itemeditork/color.lua")
+require("/itemeditork/oldGeneratedItemConverter.lua")
 
 
 --theme
@@ -91,7 +92,7 @@ function about(wid)
 	ui.scriptConfig = {}
 	ui.scriptConfig.saveraw = false
 	ui.scriptConfig.nameparam = ""
-	ui.scriptConfig.text = "RexmecK Item Editor Pro "..root.assetJson("/itemeditork/info.config", {version = "Unknown Version"})["version"].."\n \n"..aboutdescription
+	ui.scriptConfig.text = "RexmecK Item Editor Pro "..root.assetJson("/itemeditork/info.config:versionType", {version = "Unknown Version"}).." "..root.assetJson("/itemeditork/info.config:version", {version = "0"}).."\n \n"..aboutdescription
 	ui.scriptConfig.editoruuid = ""
 	ui.gui.save.disabled = true
 	player.interact("ScriptPane", ui)
@@ -114,6 +115,10 @@ function scan(wid)
 		Input(widget.getText("itemId"))
 		widget.setText("itemId","")
 	end
+end
+
+function strEnds(str, e)
+	return string.sub(str,string.len(str) - string.len(e) + 1,string.len(str)) == e
 end
 
 function Input(str)
@@ -157,7 +162,7 @@ function Input(str)
 		if s then
 			processItem(e, "right")
 		end
-	elseif pcall(root.assetJson, "/_customitems/"..str) then
+	elseif (strEnds(str, ".json") or strEnds(str, ".item") or strEnds(str, ".config")) and pcall(root.assetJson, "/_customitems/"..str) then
 		processItem(root.assetJson("/_customitems/"..str), "right")
 	else
 		local a = root.createItem({name = str, count = 1})
@@ -169,14 +174,23 @@ function Input(str)
 	end
 end
 
+function openEdit(item, spawntype)
+	local ui = root.assetJson("/itemeditork/edit/pane.json")
+	ui.scriptConfig = {}
+	ui.scriptConfig.item = item
+	ui.scriptConfig.slot = spawntype
+	ui.scriptConfig.editoruuid = sb.makeUuid()
+	player.interact("ScriptPane", ui)
+end
+
 function processItem(item, spawntype)
-	if item and item.name then
-		local ui = root.assetJson("/itemeditork/edit/pane.json")
-		ui.scriptConfig = {}
-		ui.scriptConfig.item = item
-		ui.scriptConfig.spawnType = spawntype
-		ui.scriptConfig.editoruuid = sb.makeUuid()
-		player.interact("ScriptPane", ui)
+	if item then
+		if CheckOldItem(item) then
+			local genitem = GeneratedConvert(item)
+			openEdit(genitem, spawntype)
+		elseif item.name then
+			openEdit(item, spawntype)
+		end
 	end
 end
 

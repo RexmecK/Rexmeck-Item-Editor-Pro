@@ -1,0 +1,1268 @@
+{
+    "count": 1,
+    "name": "generatedgun",
+    "parameters": {
+        "accuracy": null,
+        "classMultiplier": 1,
+        "drawables": [
+            {
+                "image": "/particles/ash/3.png?setcolor=030303",
+                "position": [
+                    0,
+                    0
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=020202",
+                "position": [
+                    0,
+                    1
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=020202",
+                "position": [
+                    0,
+                    2
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=050404",
+                "position": [
+                    1,
+                    0
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=090706",
+                "position": [
+                    1,
+                    1
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=050404",
+                "position": [
+                    1,
+                    2
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=050404",
+                "position": [
+                    1,
+                    3
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=20110E",
+                "position": [
+                    1,
+                    7
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=050404",
+                "position": [
+                    2,
+                    0
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=090706",
+                "position": [
+                    2,
+                    1
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=090706",
+                "position": [
+                    2,
+                    2
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=0F0C0A",
+                "position": [
+                    2,
+                    3
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=090706",
+                "position": [
+                    2,
+                    4
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=3E1415",
+                "position": [
+                    2,
+                    5
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=20110E",
+                "position": [
+                    2,
+                    6
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=090706",
+                "position": [
+                    3,
+                    2
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=0F0C0A",
+                "position": [
+                    3,
+                    3
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=3E1415",
+                "position": [
+                    3,
+                    4
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=3E1415",
+                "position": [
+                    3,
+                    5
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=20110E",
+                "position": [
+                    3,
+                    6
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=20110E",
+                "position": [
+                    3,
+                    7
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=050404",
+                "position": [
+                    4,
+                    1
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=090706",
+                "position": [
+                    4,
+                    3
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=160D0C",
+                "position": [
+                    4,
+                    4
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=0F0C0A",
+                "position": [
+                    4,
+                    5
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=3E1415",
+                "position": [
+                    4,
+                    6
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=3E1415",
+                "position": [
+                    4,
+                    7
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=050404",
+                "position": [
+                    5,
+                    1
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=090706",
+                "position": [
+                    5,
+                    3
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=361217",
+                "position": [
+                    5,
+                    4
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=45171A",
+                "position": [
+                    5,
+                    5
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=562027",
+                "position": [
+                    5,
+                    6
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=20110E",
+                "position": [
+                    5,
+                    7
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=050404",
+                "position": [
+                    6,
+                    2
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=0F0C0A",
+                "position": [
+                    6,
+                    3
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=361217",
+                "position": [
+                    6,
+                    4
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=45171A",
+                "position": [
+                    6,
+                    5
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=562027",
+                "position": [
+                    6,
+                    6
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=20110E",
+                "position": [
+                    6,
+                    7
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=090706",
+                "position": [
+                    7,
+                    3
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=361217",
+                "position": [
+                    7,
+                    4
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=45171A",
+                "position": [
+                    7,
+                    5
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=562027",
+                "position": [
+                    7,
+                    6
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=3F1415",
+                "position": [
+                    7,
+                    7
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=090706",
+                "position": [
+                    8,
+                    3
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=211B17",
+                "position": [
+                    8,
+                    4
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=3E1415",
+                "position": [
+                    8,
+                    5
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=342221",
+                "position": [
+                    8,
+                    6
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=3E1415",
+                "position": [
+                    8,
+                    7
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=2A231E",
+                "position": [
+                    9,
+                    3
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=0F0C0A",
+                "position": [
+                    9,
+                    4
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=16120F",
+                "position": [
+                    9,
+                    5
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=16120F",
+                "position": [
+                    9,
+                    6
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=3F1415",
+                "position": [
+                    9,
+                    7
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=0F0C0A",
+                "position": [
+                    10,
+                    4
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=3E1415",
+                "position": [
+                    10,
+                    5
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=562027",
+                "position": [
+                    10,
+                    6
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=3E1415",
+                "position": [
+                    10,
+                    7
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=1E080B",
+                "position": [
+                    11,
+                    3
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=3E1415",
+                "position": [
+                    11,
+                    4
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=3E1415",
+                "position": [
+                    11,
+                    5
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=19100F",
+                "position": [
+                    11,
+                    6
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=3E1415",
+                "position": [
+                    11,
+                    7
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=1E080B",
+                "position": [
+                    12,
+                    3
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=3E1415",
+                "position": [
+                    12,
+                    4
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=3E1415",
+                "position": [
+                    12,
+                    5
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=19100F",
+                "position": [
+                    12,
+                    6
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=3E1415",
+                "position": [
+                    12,
+                    7
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=1E080B",
+                "position": [
+                    13,
+                    3
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=3E1415",
+                "position": [
+                    13,
+                    4
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=3E1415",
+                "position": [
+                    13,
+                    5
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=562027",
+                "position": [
+                    13,
+                    6
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=3E1415",
+                "position": [
+                    13,
+                    7
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=1E080B",
+                "position": [
+                    14,
+                    3
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=3E1415",
+                "position": [
+                    14,
+                    4
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=3E1415",
+                "position": [
+                    14,
+                    5
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=562027",
+                "position": [
+                    14,
+                    6
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=3E1415",
+                "position": [
+                    14,
+                    7
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=010101",
+                "position": [
+                    15,
+                    4
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=1E1915",
+                "position": [
+                    15,
+                    5
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=562027",
+                "position": [
+                    15,
+                    6
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=3E1415",
+                "position": [
+                    15,
+                    7
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=000000",
+                "position": [
+                    16,
+                    4
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=302826",
+                "position": [
+                    16,
+                    5
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=544A44",
+                "position": [
+                    16,
+                    6
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=39302A",
+                "position": [
+                    16,
+                    7
+                ]
+            }
+        ],
+        "firePosition": [
+            19,
+            6
+        ],
+        "fireTime": 0.44,
+        "generated": true,
+        "handPosition": [
+            3,
+            2
+        ],
+        "inaccuracy": 0.015,
+        "inspectionKind": "gun",
+        "inventoryIcon": [
+            {
+                "image": "/particles/ash/3.png?setcolor=030303",
+                "position": [
+                    0,
+                    0
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=020202",
+                "position": [
+                    0,
+                    1
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=020202",
+                "position": [
+                    0,
+                    2
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=050404",
+                "position": [
+                    1,
+                    0
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=090706",
+                "position": [
+                    1,
+                    1
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=050404",
+                "position": [
+                    1,
+                    2
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=050404",
+                "position": [
+                    1,
+                    3
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=20110E",
+                "position": [
+                    1,
+                    7
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=050404",
+                "position": [
+                    2,
+                    0
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=090706",
+                "position": [
+                    2,
+                    1
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=090706",
+                "position": [
+                    2,
+                    2
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=0F0C0A",
+                "position": [
+                    2,
+                    3
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=090706",
+                "position": [
+                    2,
+                    4
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=3E1415",
+                "position": [
+                    2,
+                    5
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=20110E",
+                "position": [
+                    2,
+                    6
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=090706",
+                "position": [
+                    3,
+                    2
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=0F0C0A",
+                "position": [
+                    3,
+                    3
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=3E1415",
+                "position": [
+                    3,
+                    4
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=3E1415",
+                "position": [
+                    3,
+                    5
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=20110E",
+                "position": [
+                    3,
+                    6
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=20110E",
+                "position": [
+                    3,
+                    7
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=050404",
+                "position": [
+                    4,
+                    1
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=090706",
+                "position": [
+                    4,
+                    3
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=160D0C",
+                "position": [
+                    4,
+                    4
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=0F0C0A",
+                "position": [
+                    4,
+                    5
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=3E1415",
+                "position": [
+                    4,
+                    6
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=3E1415",
+                "position": [
+                    4,
+                    7
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=050404",
+                "position": [
+                    5,
+                    1
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=090706",
+                "position": [
+                    5,
+                    3
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=361217",
+                "position": [
+                    5,
+                    4
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=45171A",
+                "position": [
+                    5,
+                    5
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=562027",
+                "position": [
+                    5,
+                    6
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=20110E",
+                "position": [
+                    5,
+                    7
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=050404",
+                "position": [
+                    6,
+                    2
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=0F0C0A",
+                "position": [
+                    6,
+                    3
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=361217",
+                "position": [
+                    6,
+                    4
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=45171A",
+                "position": [
+                    6,
+                    5
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=562027",
+                "position": [
+                    6,
+                    6
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=20110E",
+                "position": [
+                    6,
+                    7
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=090706",
+                "position": [
+                    7,
+                    3
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=361217",
+                "position": [
+                    7,
+                    4
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=45171A",
+                "position": [
+                    7,
+                    5
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=562027",
+                "position": [
+                    7,
+                    6
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=3F1415",
+                "position": [
+                    7,
+                    7
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=090706",
+                "position": [
+                    8,
+                    3
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=211B17",
+                "position": [
+                    8,
+                    4
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=3E1415",
+                "position": [
+                    8,
+                    5
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=342221",
+                "position": [
+                    8,
+                    6
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=3E1415",
+                "position": [
+                    8,
+                    7
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=2A231E",
+                "position": [
+                    9,
+                    3
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=0F0C0A",
+                "position": [
+                    9,
+                    4
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=16120F",
+                "position": [
+                    9,
+                    5
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=16120F",
+                "position": [
+                    9,
+                    6
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=3F1415",
+                "position": [
+                    9,
+                    7
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=0F0C0A",
+                "position": [
+                    10,
+                    4
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=3E1415",
+                "position": [
+                    10,
+                    5
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=562027",
+                "position": [
+                    10,
+                    6
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=3E1415",
+                "position": [
+                    10,
+                    7
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=1E080B",
+                "position": [
+                    11,
+                    3
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=3E1415",
+                "position": [
+                    11,
+                    4
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=3E1415",
+                "position": [
+                    11,
+                    5
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=19100F",
+                "position": [
+                    11,
+                    6
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=3E1415",
+                "position": [
+                    11,
+                    7
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=1E080B",
+                "position": [
+                    12,
+                    3
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=3E1415",
+                "position": [
+                    12,
+                    4
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=3E1415",
+                "position": [
+                    12,
+                    5
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=19100F",
+                "position": [
+                    12,
+                    6
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=3E1415",
+                "position": [
+                    12,
+                    7
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=1E080B",
+                "position": [
+                    13,
+                    3
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=3E1415",
+                "position": [
+                    13,
+                    4
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=3E1415",
+                "position": [
+                    13,
+                    5
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=562027",
+                "position": [
+                    13,
+                    6
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=3E1415",
+                "position": [
+                    13,
+                    7
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=1E080B",
+                "position": [
+                    14,
+                    3
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=3E1415",
+                "position": [
+                    14,
+                    4
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=3E1415",
+                "position": [
+                    14,
+                    5
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=562027",
+                "position": [
+                    14,
+                    6
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=3E1415",
+                "position": [
+                    14,
+                    7
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=010101",
+                "position": [
+                    15,
+                    4
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=1E1915",
+                "position": [
+                    15,
+                    5
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=562027",
+                "position": [
+                    15,
+                    6
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=3E1415",
+                "position": [
+                    15,
+                    7
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=000000",
+                "position": [
+                    16,
+                    4
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=302826",
+                "position": [
+                    16,
+                    5
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=544A44",
+                "position": [
+                    16,
+                    6
+                ]
+            },
+            {
+                "image": "/particles/ash/3.png?setcolor=39302A",
+                "position": [
+                    16,
+                    7
+                ]
+            }
+        ],
+        "itemName": "generatedgun",
+        "level": 10,
+        "levelScale": 250,
+        "muzzleEffect": {
+            "animation": "/animations/muzzleflash/bulletmuzzle3/bulletmuzzle3.animation",
+            "fireSound": [
+                {
+                    "file": "/sfx/gun/revolver1.wav",
+                    "volume": 1.4
+                }
+            ]
+        },
+        "projectile": {
+            "actionOnReap": [
+                {
+                    "action": "sound",
+                    "options": [
+                        "/sfx/gun/impact_robotic2.wav"
+                    ]
+                },
+                {
+                    "action": "projectile",
+                    "inheritDamageFactor": 10,
+                    "type": "smoke"
+                }
+            ],
+            "level": 10.040457725524902,
+            "power": 0.7706108689308167,
+            "processing": "?replace;6f4c01=a03d13;cf8f02=ff5105;fdd14d=ffa069;fee9a9=ffd2b7?border=1;c53c0065;c53c0000",
+            "speed": 120
+        },
+        "projectileCount": 1,
+        "projectileSeparation": 0,
+        "projectileType": "bullet-1",
+        "rarity": "Legendary",
+        "recoilTime": 0.1,
+        "shortdescription": "Duke Mk.44",
+        "spread": null,
+        "twoHanded": true,
+        "weaponType": "Revolver"
+    }
+}
