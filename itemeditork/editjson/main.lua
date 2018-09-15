@@ -1018,7 +1018,17 @@ function updateKeyboard(dt)
 	end
 end
 
+function cursorOverride(screenPosition)
+	if widget.getChildAt(screenPosition) == ".textbox" then
+		return "/itemeditork/editjson/text.cursor"
+	elseif widget.getChildAt(screenPosition) == ".paste" then
+		return "/itemeditork/editjson/tooltip1.cursor"
+	end
+end
+
 function updateMouse(dt)
+
+	
 
 	if mouse[3] and mouse[3].down and not keyboard.backspace then
 		if not panning then
