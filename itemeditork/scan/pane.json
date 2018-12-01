@@ -187,6 +187,7 @@
 		"itemId" : {
 			"vAnchor" : "bottom",
 			"maxWidth" : 150,
+			"callback" : "null"
 			"hAnchor" : "left",
 			"zlevel" : 15,
 			"type" : "textbox",
