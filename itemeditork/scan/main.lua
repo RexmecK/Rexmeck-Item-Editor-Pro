@@ -3,6 +3,21 @@ require("/itemeditork/color.lua")
 require("/itemeditork/oldGeneratedItemConverter.lua")
 
 
+
+function init()
+	pcall(setUIColor, status.statusProperty("rex_ui_color", root.assetJson("/itemeditork/info.config:defaultColor", "72e372")))
+	shiftingEnabled = status.statusProperty("rex_ui_rainbow", false)
+end
+
+function uninit()
+
+end
+
+function update(dt)
+	shiftUI(dt)
+end
+
+
 --theme
 
 _buttons = {
@@ -52,8 +67,6 @@ function setUIColor(dr)
 
 end
 
-
-
 --
 
 function settings(wid)
@@ -74,7 +87,7 @@ Testers:
  SteamID : 76561193845521385
  
  Discord : typical#0654
- Starbound Char : ª
+ Starbound Char : ï¿½
  
 Credits:
  Craig Mason-Jones : JSON.lua
@@ -193,20 +206,6 @@ function processItem(item, spawntype)
 		end
 	end
 end
-
-function init()
-	pcall(setUIColor, status.statusProperty("rex_ui_color", root.assetJson("/itemeditork/info.config:defaultColor", "72e372")))
-	shiftingEnabled = status.statusProperty("rex_ui_rainbow", false)
-end
-
-function uninit()
-
-end
-
-function update(dt)
-	shiftUI(dt)
-end
-
 
 function split(inputstr, sep) 
         if sep == nil then
