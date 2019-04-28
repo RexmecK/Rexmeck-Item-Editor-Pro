@@ -7,6 +7,7 @@
   "name" : "RexmecK Item Editor Pro",
   "priority" : 122,
   "requires" : [],
+  "includes" : ["SpawnableItemPack"],
   "steamContentId" : "1217967107",
   "tags" : "Miscellaneous|Cheats and God Items|User Interface|In-Game Tools",
   "version" : "Beta 7"
