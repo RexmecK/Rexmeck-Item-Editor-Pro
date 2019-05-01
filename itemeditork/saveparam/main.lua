@@ -66,6 +66,10 @@ function widget_save()
 	end
 end
 
+function widget_name()
+	widget_save()
+end
+
 function call(wid)
 	if _ENV["widget_"..wid] then
 		_ENV["widget_"..wid]()
@@ -102,6 +106,8 @@ function init()
 		widget.setText("name", config.getParameter("scriptConfig").nameparam)
 		widget.setText("h1", "Save parameter for "..string.sub(config.getParameter("scriptConfig").editoruuid, 1,8))
 	end
+
+	widget.focus("name")
 end
 
 function uninit()

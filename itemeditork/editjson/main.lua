@@ -958,6 +958,7 @@ function init()
 		end
 	end
 	timesnap = 3
+	widget.focus("textbox")
 end
 
 function uninit()

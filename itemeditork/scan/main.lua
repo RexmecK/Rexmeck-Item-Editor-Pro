@@ -124,7 +124,7 @@ function scan(wid)
 		processItem(player.essentialItem("painttool"), wid)
 	elseif wid == "search" then
 		processItem(player.essentialItem("inspectiontool"), wid)
-	elseif wid == "spawnItem" then
+	elseif wid == "spawnItem" or wid == "itemId" then
 		Input(widget.getText("itemId"))
 		widget.setText("itemId","")
 	end

@@ -195,6 +195,7 @@
 			"textAlign" : "left",
 			"position" : [4, 5],
 			"fontSize" : 7,
+			"enterKey" : "scan",
 			"caption" : "editorparametername"
 		}
 	},
