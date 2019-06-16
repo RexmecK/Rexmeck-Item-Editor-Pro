@@ -1157,10 +1157,10 @@ function updateRender(dt)
 		if tb.select then
 			updateSelect(dt)
 		end
-		drt:drawLine({guisize.x - 8, guisize.y - 2}, {guisize.x - 8, 2}, "#4b4b4b", 14)	
-		drt:drawLine({guisize.x - 8, guisize.y - 3}, {guisize.x - 8, 3}, "#343434", 10)
-		drt:drawLine({guisize.x - 8, math.max((guisize.y - 2) - (((renderLines - 1) / math.max(#textlist, (renderLines - 1))) * (guisize.y - 2)) - (tb.view[2] / #textlist) * (guisize.y - 2), 2)}, {guisize.x - 8, math.max(math.min((guisize.y - 2) - (tb.view[2] / (#textlist - 1)) * (guisize.y - 1), (guisize.y - 2)), 1)}, "#"..themeColor, 10)
-		drt:drawLine({guisize.x - 8, math.max(guisize.y - (((renderLines - 1) / math.max(#textlist, (renderLines - 1))) * (guisize.y - 2)) - (tb.view[2] / #textlist) * (guisize.y - 2), 2)}, {guisize.x - 8, math.max(math.min((guisize.y - 3) - (tb.view[2] / (#textlist - 1)) * (guisize.y - 1), (guisize.y - 2)), 1)}, "#"..themeColor, 10)
+		drt:drawLine({guisize.x - 7.5, guisize.y - 1.5}, {guisize.x - 7.5, 1.5}, "#4b4b4b", 16)	
+		drt:drawLine({guisize.x - 7.5, guisize.y - 3}, {guisize.x - 7.5, 3}, "#343434", 10)
+		drt:drawLine({guisize.x - 7.5, math.max((guisize.y - 2) - (((renderLines - 1) / math.max(#textlist, (renderLines - 1))) * (guisize.y - 3)) - (tb.view[2] / #textlist) * (guisize.y - 2), 2)}, {guisize.x - 7.5, math.max(math.min((guisize.y - 2) - (tb.view[2] / (#textlist - 1)) * (guisize.y - 1), (guisize.y - 3)), 1)}, "#"..themeColor, 10)
+		drt:drawLine({guisize.x - 7.5, math.max(guisize.y - (((renderLines - 1) / math.max(#textlist, (renderLines - 1))) * (guisize.y - 3)) - (tb.view[2] / #textlist) * (guisize.y - 2), 2)}, {guisize.x - 7.5, math.max(math.min((guisize.y - 3) - (tb.view[2] / (#textlist - 1)) * (guisize.y - 1), (guisize.y - 3)), 1)}, "#"..themeColor, 10)
 		--guisize.x 
 		--(guisize.x - 1)
 		--(guisize.x - 2)
