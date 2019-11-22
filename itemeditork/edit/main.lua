@@ -50,6 +50,7 @@ end
 me = {
 	_item = nil, --backup item
 	item = nil, --editingitem
+	hasChanges = false,
 	uuid = "aaaa"
 }
 
@@ -87,6 +88,7 @@ function widget_remparam()
 	local sel = widget.getListSelected("objects.list")
 	if sel then
 		removeListItem(sel)
+		me.hasChanges = true
 	end
 end
 
@@ -185,6 +187,7 @@ end
 
 function widget_save()
 	local saved = packItem()
+	me.hasChanges = false
 	if saved then
 		local ui = root.assetJson("/itemeditork/save/pane.json")
 		ui.scriptConfig = {item = saved, originalItem = me._item, editoruuid = me.uuid, slot = me.slot}
@@ -292,6 +295,8 @@ function roaItem(n, o) --replace or add
 			return
 		end
 	end
+	
+	me.hasChanges = true
 	addItem(n, o)
 end
 
@@ -374,6 +379,7 @@ function init()
 	shiftingEnabled = status.statusProperty("rex_ui_rainbow", false)
 	me._item = config.getParameter("scriptConfig").item
 	me.slot = config.getParameter("scriptConfig").slot
+	me.hasChanges =  config.getParameter("scriptConfig").hasChanges
 	local reloadsurvival = widget.getData("close")
 	if reloadsurvival then
 		me._item = reloadsurvival.item
@@ -415,7 +421,21 @@ function init()
 end
 
 function uninit()
-	widget.setData("close", {item = packItem(), originalItem = me._item, slot = me.slot})
+	local packed = packItem()
+	widget.setData("close", {item = packed, originalItem = me._item, slot = me.slot})
+	if me.hasChanges then
+		sb.logWarn("UNSAVED ITEM: "..sb.printJson(packed))
+		event_unsaved()
+	end
+end
+
+function event_unsaved()
+	local saved = packItem()
+	if saved then
+		local ui = root.assetJson("/itemeditork/unsaved/pane.json")
+		ui.scriptConfig = {item = saved, originalItem = me._item, editoruuid = me.uuid, slot = me.slot}
+		player.interact("ScriptPane", ui)
+	end
 end
 
 function update(dt)

@@ -1,0 +1,82 @@
+{
+	"gui" : {
+
+		"close" : {
+			"type" : "button",
+			"base" : "/itemeditork/unsaved/x.png",
+			"hover" : "/itemeditork/unsaved/x.png",
+			"pressed" : "/itemeditork/unsaved/x.png",
+			"pressedOffset" : [0, 0],
+			"callback" : "close",
+			"position" : [130, 31],
+			"vAnchor" : "bottom",
+			"hAnchor" : "right",
+			"zlevel" : 99
+		},
+
+		"background" : {
+			"zlevel" : 0,
+			"type" : "background",
+			"fileHeader" : "/itemeditork/unsaved/header.png",
+			"fileBody" : "/itemeditork/unsaved/body.png"
+		},
+
+		"h1" : {
+			"vAnchor" : "bottom",
+			"hAnchor" : "left",
+			"zlevel" : 100,
+			"color" : "black",
+			"type" : "label",
+			"position" : [3, 33],
+			"fontSize" : 6,
+			"value" : "Rexmeck Item Editor"
+		},
+
+		"bg1" : {
+			"file" : "/itemeditork/unsaved/header.png",
+			"vAnchor" : "bottom",
+			"hAnchor" : "left",
+			"zlevel" : 3,
+			"type" : "image",
+			"position" : [0, 31]
+		},
+
+		//BASE FINISHED
+
+		"yes" : {
+			"pressedOffset" : [0, -1],
+			"callback" : "yes",
+			"wrapWidth" : 80,
+			"base" : "/itemeditork/unsaved/yes.png",
+			"hover" : "/itemeditork/unsaved/yes.png?brightness=60",
+			"hAnchor" : "left",
+			"vAnchor" : "bottom",
+			"zlevel" : 15,
+			"type" : "button",
+			"position" : [2, 3],
+			"fontSize" : 7
+		},
+
+		"no" : {
+			"pressedOffset" : [0, -1],
+			"callback" : "no",
+			"wrapWidth" : 80,
+			"base" : "/itemeditork/unsaved/no.png",
+			"hover" : "/itemeditork/unsaved/no.png?brightness=60",
+			"hAnchor" : "left",
+			"vAnchor" : "bottom",
+			"zlevel" : 15,
+			"type" : "button",
+			"position" : [29, 3],
+			"fontSize" : 7
+		}
+	},
+
+	"scriptWidgetCallbacks" : [
+		"yes",
+		"no"
+	],
+
+	"scripts" : ["/itemeditork/unsaved/main.lua"],
+	"scriptDelta" : 1
+}
